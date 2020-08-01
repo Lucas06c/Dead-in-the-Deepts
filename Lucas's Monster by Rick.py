@@ -11,7 +11,7 @@ class Enemy:     # Create class enemy
         self.name = name
         self.hp = hp
         self.dmg = dmg
-"""
+
     def enemy_info(self): # Gives info about the enemy and stats. 
         
         print("")
@@ -21,7 +21,7 @@ class Enemy:     # Create class enemy
         print("|    +" + style.BOLD + " Dmg   -> " + style.RESET + str(self.dmg))# Dmg
         print("------------------------------------------------------------------------ ")
 
-"""
+
 Slime = Enemy("Slime", 5, 2)
 
 #Slime.enemy_info()
@@ -35,4 +35,5 @@ class Human:
         result = int(Slime.dmg)  -  int(self.hpp)
         print(self.result)
 
-hooman = Human(100)
+h1 = Human(100)
+h1.result()
