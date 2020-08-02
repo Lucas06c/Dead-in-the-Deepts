@@ -37,7 +37,7 @@ def aspider():                                                           #Spider
         print(result)
 
 def askeleton():                                                   #Skeleton basic attack
-    if ph == 0 or ph > 0:
+    if ph == 0 or ph < 0:
         print("You died! Your hp dropped to zero")
         pass
     else:

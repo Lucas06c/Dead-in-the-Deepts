@@ -3,14 +3,14 @@ import random
 ph = 100
 
 monsters = {
-    "Slime" : { "Name" : "Slime", "Dmg" : 2, "HP" : 5},
-    "Zombie" : { "Name" : "Zombie", "Dmg" : 5, "HP" : 10},
-    "Spider" : { "Name" : "Spider", "Dmg" : 7, "HP" : 12}, 
-    "Skeleton" : { "Name" : "Skeleton", "Dmg" : 10, "HP" : 10}
+    "Slime" : { "Name" : "Slime", "Dmg" : random.randint(0,3), "HP" : 5},           #This creates a range of damage, from 0 (a miss) to a critical hit
+    "Zombie" : { "Name" : "Zombie", "Dmg" : random.randint(0,6), "HP" : 10},
+    "Spider" : { "Name" : "Spider", "Dmg" : random.randint(0,8), "HP" : 12}, 
+    "Skeleton" : { "Name" : "Skeleton", "Dmg" : random.randint(0,12), "HP" : 10}
 }
 
 def aslime():                                                   #Slime basic attack
-    if ph == 0 or ph > 0:
+    if ph == 0 or ph < 0:
         print("You died! Your hp dropped to zero")
         pass
     else:
@@ -49,4 +49,5 @@ def askeleton():                                                   #Skeleton bas
 
 attacks = [ aslime ,azombie , aspider , askeleton ]
 
+aslime()
 
