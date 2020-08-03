@@ -1,0 +1,24 @@
+{
+    "monster" : {
+
+        "Slime" : {
+            "name" : "Slime",
+            "hp" : 5,
+            "dmg" : 2
+        },
+
+        "Spider" : {
+            "name" : "Spider",
+            "hp" : 3,
+            "dmg" : 4
+
+        },
+
+        "Undead One" : {
+            "name" : "Undead One",
+            "hp" : 8,
+            "dmg" : 4
+        }
+    }
+
+}
