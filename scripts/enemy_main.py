@@ -2,24 +2,26 @@
 #              @Lucas06c           #
 ####################################
 # License: GPL v3
-# Edited: 2020/08/01
+# Edited: 2020/08/03
 
 
 # Main enemy code. Work In Progres. 
-
+import json  # Nedeed to acces data.
 from colored import fore, back, style, fg, bg, attr   # That module works for the formatting and coroling of the output text.
 
 
 class Enemy:     # Create class enemy
  
-    def __init__(self, name, hp, dmg): # Idk what this do, but else this doesent work.
-        self.name = name
-        self.hp = hp 
-        self.dmg = dmg
-        self.attacks = attacks
+    def __init__(self, monster_id): # Idk what this do, but else this doesent work.
+        self.monster_id = monster_id
 
-    def enemy_info(self): # Gives info about the enemy and stats. 
 
+    def enemy_get_info(self): # Acces to a JSON file wich contains the stats of enemys.
+        with open("enemys.json") as json_enemys:
+
+
+
+    def enemy_display_info(self): # Gives info about the enemy and stats. 
         bestiary_color = fg("#7c5706")  # Those vars are for coloring the "Besniary" 
         res = attr("reset")             # in the info menu.
 
@@ -33,19 +35,9 @@ class Enemy:     # Create class enemy
         print("--------------------------------------------------------------------------------")
 
 
-""" 
-    def enemy_combat(self):
-        
-        kind_of_attacks = {
-            "simp_punch" : 2
-        }
-    
-        def attack():
-            kind_of_attacks.get(attacks, "ERROR: Read the log and report") 
-"""      
 
 
 
-Slime = Enemy("Slime", 5, 2, "simp_punch")
+Slime = Enemy("slime")
 
 Slime.enemy_info()
