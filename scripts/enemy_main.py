@@ -6,7 +6,7 @@
 
 
 # Main enemy code. Work In Progres. 
-
+import json # Required to acces data about enemys. 
 from colored import fore, back, style, fg, bg, attr   # That module works for the formatting and coroling of the output text.
 
 
