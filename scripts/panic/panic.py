@@ -8,13 +8,15 @@
 from colored import fore, back, style, fg, bg, attr     # Module requerid for formatting correctly the error msg.
 
 
-class Panic:
+class Panic:     # Creates a class for the error handeling. 
             
-    def panic(error):
-        error_color = fg("#ff0303")
-        warn_color = fg("#ff8002") 
+    def panic(error):   
+        error_color = fg("#ff0303")     # 255 red color for the "FATAL ERROR"
+        warn_color = fg("#ff8002")      # orange like color for the error msg.
         res = attr("reset")
 
+
+        # Prints out the error msg. 
         print(" ")
         print("     " + style.BOLD + error_color + "[X] FATAL ERROR!" + res)
         print(" ________________________________________________________________________")
