@@ -1,4 +1,5 @@
-import random
+from random import randint  # A way better to import, less memory use. Always import only what you need.
+                            # Side note: randint is the sema as random but only with int values. Better to use those instead floats.    
 
 ph = 100
 
