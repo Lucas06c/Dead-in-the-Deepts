@@ -22,7 +22,7 @@ class Enemy:     # Create class enemy
     
     def enemy_get_info(self): # Acces to a JSON file wich contains the stats of enemys.
         try:
-            with open("D:\Dead-is-in-the-deepts\scripts\enemys.json") as json_enemys: # Opens the JSON file whit all the info
+            with open("route to <enemys.json> file") as json_enemys: # Opens the JSON file whit all the info
                 data = json.load(json_enemys)
         except(OSError):
             panic.panic(" Fatal error trying to open the enemys.json file, look in GitHub issues for the correct fix. \n Oopss... Follow the link below and there you will find the correct fix. \n Issue link: https://github.com/Lucas06c/Dead-is-in-the-deepts/issues/2")
@@ -65,6 +65,7 @@ class Enemy:     # Create class enemy
 
 
 # Test function, only for testing and development process, not expected to be on unestable. 
+'''
 def test():     
     Spider = Enemy("spider")
     Spider.enemy_display_info()
@@ -74,3 +75,4 @@ def test():
     Undedad_One.enemy_display_info()
 
 test()
+'''
