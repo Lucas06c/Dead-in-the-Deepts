@@ -1,4 +1,4 @@
-from random import random , randint
+from random import randint
 
 
 game = True
@@ -10,10 +10,10 @@ while game == True:
         ph = 100
 
         monsters = {
-            "Slime" : { "Name" : "Slime", "Dmg" : random.randint(0,3), "HP" : 5},           #This creates a range of damage, from 0 (a miss) to a critical hit
-            "Zombie" : { "Name" : "Zombie", "Dmg" : random.randint(0,6), "HP" : 10},
-            "Spider" : { "Name" : "Spider", "Dmg" : random.randint(0,8), "HP" : 12}, 
-            "Skeleton" : { "Name" : "Skeleton", "Dmg" : random.randint(0,12), "HP" : 10}
+            "Slime" : { "Name" : "Slime", "Dmg" : randint(0,3), "HP" : 5},           #This creates a range of damage, from 0 (a miss) to a critical hit
+            "Zombie" : { "Name" : "Zombie", "Dmg" : randint(0,6), "HP" : 10},
+            "Spider" : { "Name" : "Spider", "Dmg" : randint(0,8), "HP" : 12}, 
+            "Skeleton" : { "Name" : "Skeleton", "Dmg" : randint(0,12), "HP" : 10}
         }
 
         def aslime():
