@@ -2,7 +2,7 @@
 #              @Lucas06c           #
 ####################################
 # License: GPL v3
-# Edited: 2020/08/03
+
 
 
 # Main enemy code. Work In Progres. 
