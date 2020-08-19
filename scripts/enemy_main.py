@@ -64,15 +64,4 @@ class Enemy:     # Create class enemy
 
 
 
-# Test function, only for testing and development process, not expected to be on unestable. 
-'''
-def test():     
-    Spider = Enemy("spider")
-    Spider.enemy_display_info()
-    Slime = Enemy("slime")
-    Slime.enemy_display_info()
-    Undedad_One = Enemy("undead_one")
-    Undedad_One.enemy_display_info()
 
-test()
-'''
