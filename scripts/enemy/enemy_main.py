@@ -8,6 +8,8 @@
 # Main enemy code. Work In Progres. 
 
 import json  # Nedeed to acces data.
+import sys
+sys.path.append("./scripts")    # Idk but this works for me.
 from panic.panic import Panic
 from colored import fore, back, style, fg, bg, attr   # That module works for the formatting and coroling of the output text.
 
@@ -21,14 +23,14 @@ class Enemy:     # Create class enemy
 
     
     def enemy_get_info(self): # Acces to a JSON file wich contains the stats of enemys.
-        try:
-            with open("route to <enemys.json> file") as json_enemys: # Opens the JSON file whit all the info
+        try:    # If the program can't find the path to the JSON file should display an error msg.
+            with open("D:\Dead-is-in-the-deepts\scripts\enemy\enemys.json") as json_enemys: # Opens the JSON file whit all the info
                 data = json.load(json_enemys)
-        except(OSError):
+        except(OSError): # The error msg.
             panic.panic(" Fatal error trying to open the enemys.json file, look in GitHub issues for the correct fix. \n Oopss... Follow the link below and there you will find the correct fix. \n Issue link: https://github.com/Lucas06c/Dead-is-in-the-deepts/issues/2")
 
-
-        enemy_name = data["monster"][self.enemy_id]["name"]
+        # Gets all the data from the JSON file. 
+        enemy_name = data["monster"][self.enemy_id]["name"]     
         enemy_hp = data["monster"][self.enemy_id]["hp"]
         enemy_dmg = data["monster"][self.enemy_id]["dmg"]
         
