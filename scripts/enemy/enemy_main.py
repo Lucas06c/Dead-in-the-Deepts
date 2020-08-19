@@ -8,7 +8,7 @@
 # Main enemy code. Work In Progres. 
 
 import json  # Nedeed to acces data.
-from scripts.panic.panic import Panic
+from panic.panic import Panic
 from colored import fore, back, style, fg, bg, attr   # That module works for the formatting and coroling of the output text.
 
 panic = Panic
