@@ -20,7 +20,10 @@ class Panic:     # Creates a class for the error handeling.
         print(" ")
         print("     " + style.BOLD + error_color + "[X] FATAL ERROR!" + res)
         print(" ________________________________________________________________________")
-        print( warn_color + error + res)
+        if error == "":
+            print(warn_color + "  No error msg especified.  \n  Something just go wrong." + res)
+        else:
+            print( warn_color + error + res)
         print(" ")
         print(" ")
         input(" Hit intro to exit...")
