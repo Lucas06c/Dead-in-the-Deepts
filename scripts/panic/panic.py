@@ -20,9 +20,9 @@ class Panic:     # Creates a class for the error handeling.
         print(" ")
         print("     " + style.BOLD + error_color + "[X] FATAL ERROR!" + res)
         print(" ________________________________________________________________________")
-        if error == "":
+        if error == "":                                                                                 # If not error msg especified: the program will return a default error msg.
             print(warn_color + "  No error msg especified.  \n  Something just go wrong." + res)
-        else:
+        else:                                                                                           # Else; will return the provided error msg.
             print( warn_color + error + res)
         print(" ")
         print(" ")
