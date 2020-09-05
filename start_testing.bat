@@ -1,3 +1,2 @@
 @echo off
-cd .\test
-python test.py
+python .\test\test.py
