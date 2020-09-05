@@ -2,7 +2,7 @@
 #              @Lucas06c           #
 ####################################
 # License: GPL v3
-
+# enemy_main.py
 
 
 # Main enemy code. Work In Progres. 
@@ -30,16 +30,14 @@ class Enemy:     # Create class enemy
             panic.panic(" Fatal error trying to open the enemys.json file, look in GitHub issues for the correct fix. \n Oopss... Follow the link below and there you will find the correct fix. \n Issue link: https://github.com/Lucas06c/Dead-is-in-the-deepts/issues/2")
 
         # Gets all the data from the JSON file. 
+
         enemy_name = data["monster"][self.enemy_id]["name"]     
         enemy_hp = data["monster"][self.enemy_id]["hp"]
         enemy_dmg = data["monster"][self.enemy_id]["dmg"]
         
-        enemy_stats = {"name" : enemy_name, "hp" : enemy_hp, "dmg" : enemy_dmg}
+        enemy_stats = {"name" : enemy_name, "hp" : enemy_hp, "dmg" : enemy_dmg}     # Get the enemy stats from the json.
 
-        return enemy_stats
-        
-
-
+        return enemy_stats  # Return the enemy stats.
         
 
 
@@ -54,14 +52,16 @@ class Enemy:     # Create class enemy
         dmg_color = fg("#db1e0d")       # Color var for the dmg number in the menu. 
         res = attr("reset")             # That var is for resetting the style and color after every formatting. 
 
-        print("")
-        print("------------------------------" + style.BOLD +" Enemy Info " + style.RESET + "--------------------------------------")
+        # Prints out a menu with info about the enemy. Like hp and that stuff. 
+        print("\n" + "-" * 30 + style.BOLD +" Enemy Info " + style.RESET + "-" + 38)
         print("|    +" + style.BOLD + " Name  -> " + style.RESET + style.DIM + enemy_name + style.RESET) # Name of the enemy.
         print("|    +" + style.BOLD + " Hp    -> " + style.RESET + hp_color + str(enemy_hp) + res)   # Hp  The str() is for convert int values to str because the hp and the dmg are int values.
         print("|    +" + style.BOLD + " Dmg   -> " + style.RESET + dmg_color + str(enemy_dmg) + res)# Dmg
         print("|                                                                               ")
         print("|   " + style.BOLD + " \->" + style.RESET + " This monster already have an entry in the " + bestiary_color + "Bestiary." + res)
-        print("--------------------------------------------------------------------------------")
+        print("-" * 80)     # Updated this for cleaner code.
+
+    def enemy_appears(self): 
 
 
 
